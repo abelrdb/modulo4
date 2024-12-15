@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabajo Practico</title>
+        <script src="https://cdn.tailwindcss.com"></script>        
+    </head>
+    <body class="bg-gray-100 font-sans">
+        <div class="container mx-auto p-6">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Modulo 4</h1>
+            <div class="text-center">
+              <button id="btnConnect" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Conectar wallet</button>
+              <button id="btnDisconnect" class="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600 transition mt-4" style="display:none;">Desconectar</button>
+            </div>
+            <p id="status" class="text-center text-gray-600 mt-4">Estado: Desconectado</p>
+            
+            
+    
+            <!-- Formulario para agregar liquidez al pool-->
+    
+            <div id="agregarLiq" style="display:none;" class="bg-white p-6 rounded-lg shadow-md mt-6">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Agregar liquidez</h2>
+
+              <label for="tokenA" class="block text-gray-700">Token A:</label>
+              <input type="number" id="tokenA" placeholder="Ingrese un monto en ETH" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <label for="tokenB" class="block text-gray-700 mt-4">Token B:</label>
+              <input type="number" id="tokenB" placeholder="Ingrese un monto en ETH" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <button id="btnAgregarLiq" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition mt-4">Aceptar</button>
+            </div> 
+
+
+            <!-- Formulario para quitar liquidez al pool-->
+
+            <div id="quitarLiq" style="display:none;" class="bg-white p-6 rounded-lg shadow-md mt-6">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Quitar liquidez</h2>
+
+              <label for="tokenAquitar" class="block text-gray-700">Token A:</label>
+              <input type="number" id="tokenAquitar" placeholder="Ingrese un monto en ETH" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <label for="tokenBquitar" class="block text-gray-700 mt-4">Token B:</label>
+              <input type="number" id="tokenBquitar" placeholder="Ingrese un monto en ETH" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <button id="btnQuitarLiq" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition mt-4">Aceptar</button>
+            </div>
+    
+
+
+            <!-- Formulario para intercambiar token A por token B -->
+
+            <div id="swapAforB" style="display:none;" class="bg-white p-6 rounded-lg shadow-md mt-6">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Swap Token A for Token B</h2>
+
+              <label for="swapTokenA" class="block text-gray-700">Token A:</label>
+              <input type="number" id="swapTokenA" placeholder="Ingrese un monto de Token A" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <button id="btnSwapTokenA" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition mt-4">Aceptar</button>
+            </div>
+
+
+
+             <!-- Formulario para intercambiar token B por token A -->
+
+            <div id="swapBforA" style="display:none;" class="bg-white p-6 rounded-lg shadow-md mt-6">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Swap Token B for Token A</h2>
+
+              <label for="swapTokenB" class="block text-gray-700">Token B:</label>
+              <input type="number" id="swapTokenB" placeholder="Ingrese un monto de Token B" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <button id="btnSwapTokenB" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition mt-4">Aceptar</button>
+            </div>
+
+
+
+            <!-- Formulario para ver el precio de un token-->
+            <div id="getPriceToken" style="display:none;" class="bg-white p-6 rounded-lg shadow-md mt-6">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Precio Tokens</h2>
+
+              <label for="getPrices" class="block text-gray-700">Token:</label>
+              <input type="text" id="getPrices" placeholder="Ingrese tokenA o tokenB" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+              
+              <button id="btnPrice" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition mt-4">Aceptar</button>
+            </div>
+
+
+
+        </div>
+
+        <script type="module"  src="./js/script.js">  </script>
+
+    </body>
+</html>
